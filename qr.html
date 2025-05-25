@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator - CrazeTool Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>QR Code Generator</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+  <main>
+    <input type="text" id="qr-input" placeholder="Enter text or URL">
+    <button onclick="generateQR()">Generate QR</button>
+    <div id="qr-result"></div>
+  </main>
+  <footer><p>&copy; 2025 CrazeTool Hub</p></footer>
+  <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+  <script>
+    function generateQR() {
+      const input = document.getElementById("qr-input").value;
+      QRCode.toDataURL(input, function (err, url) {
+        document.getElementById("qr-result").innerHTML = `<img src="${url}" alt="QR Code"/>`;
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Font Generator - CrazeTool Hub</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header><h1>Font Generator</h1><nav><a href="index.html">Home</a></nav></header>
+  <main>
+    <input type="text" id="font-input" placeholder="Type something..." />
+    <div id="font-results"></div>
+  </main>
+  <footer><p>&copy; 2025 CrazeTool Hub</p></footer>
+  <script>
+    const fonts = ["𝓒𝓻𝓪𝔃𝓮", "ＣＲＡＺＥ", "Ƈɾαȥҽ", "ᏟᏒᎪᏃᎬ"];
+    document.getElementById("font-input").addEventListener("input", function() {
+      const val = this.value;
+      document.getElementById("font-results").innerHTML =
+        fonts.map(f => `<p>${f.replace("Craze", val || "Craze")}</p>`).join("");
+    });
+  </script>
+</body>
+</html>

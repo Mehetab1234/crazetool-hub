@@ -1,0 +1,26 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+header, footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+nav a {
+  margin: 0 10px;
+  color: #0cf;
+  text-decoration: none;
+}
+main {
+  padding: 20px;
+}
+.theme-toggle {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
